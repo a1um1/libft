@@ -6,15 +6,27 @@
 /*   By: tlakchai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/25 17:05:14 by tlakchai          #+#    #+#             */
-/*   Updated: 2023/08/25 17:11:22 by tlakchai         ###   ########.fr       */
+/*   Updated: 2023/08/25 18:28:12 by tlakchai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include "stdio.h"
 
-int main(void)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	printf("%s\n", strstr("abcdefghijklmnopqrst", "ef"));
-	return 0;
+	size_t		i;
+	size_t		count;
+
+	count = ft_strlen(needle);
+	i = 0;
+	if (count < 1)
+		return ((char *) haystack);
+	while (haystack[i] && i + count <= len)
+	{
+		if (haystack[i] == needle[0]
+			&& ft_strncmp(haystack + i, needle, count) == 0)
+			return ((char *) haystack + i);
+		i++;
+	}
+	return (NULL);
 }
