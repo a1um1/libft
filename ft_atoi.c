@@ -6,9 +6,11 @@
 /*   By: tlakchai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/25 13:15:39 by tlakchai          #+#    #+#             */
-/*   Updated: 2023/08/25 13:33:50 by tlakchai         ###   ########.fr       */
+/*   Updated: 2023/08/25 19:27:19 by tlakchai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h";
 
 static int	is_space(char c)
 {
@@ -25,6 +27,8 @@ int	ft_atoi(const char *str)
 	i = 0;
 	result = 0;
 	mulp = 1;
+	if (str == NULL)
+		return (0);
 	while (is_space(str[i]))
 		i++;
 	if (str[i] == '+' || str[i] == '-')
