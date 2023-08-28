@@ -6,40 +6,30 @@
 /*   By: tlakchai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/28 15:13:30 by tlakchai          #+#    #+#             */
-/*   Updated: 2023/08/28 15:16:18 by tlakchai         ###   ########.fr       */
+/*   Updated: 2023/08/28 16:06:57 by tlakchai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	len_of_str(long n)
-{
-	int	size;
-
-	size = 0;
-	while (n > 0)
-	{
-		size++;
-		n = n / 10;
-	}
-	return (size);
-}
-
 void	ft_putnbr_fd(int n, int fd)
 {
-	char	*r;
-	long	nn;
-	int		is_neg;
-
-	r = ft_itoa(n);
-	if (!r)
-		return ;
-	nn = (long) n;
-	is_neg = 0;
-	if (nn < 0)
+	if (n == -2147483648)
 	{
-		is_neg = 1;
-		nn = -nn;
+		ft_putchar_fd('-', fd);
+		ft_putchar_fd('2', fd);
+		n = 147483648;
 	}
-	write(fd, nn, len_of_str(nn) + is_neg + 1);
+	if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		n *= -1;
+	}
+	if (n >= 10)
+	{
+		ft_putnbr_fd(n / 10, fd);
+		ft_putnbr_fd(n % 10, fd);
+	}
+	else
+		ft_putchar_fd(n + '0', fd);
 }

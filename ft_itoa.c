@@ -6,7 +6,7 @@
 /*   By: tlakchai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/28 13:56:41 by tlakchai          #+#    #+#             */
-/*   Updated: 2023/08/28 15:10:17 by tlakchai         ###   ########.fr       */
+/*   Updated: 2023/08/28 15:48:14 by tlakchai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,48 +14,50 @@
 
 static int	len_of_str(long n)
 {
-	int	size;
+	int	count;
 
-	size = 0;
-	while (n > 0)
+	count = 0;
+	if (n == 0)
+		return (1);
+	if (n < 0)
+		count++;
+	while (n != 0)
 	{
-		size++;
 		n = n / 10;
+		count++;
 	}
-	return (size);
+	return (count);
+}
+
+static int	sign_of(char *s, int n)
+{
+	if (n < 0)
+	{
+		s[0] = '-';
+		return (-1);
+	}
+	else if (n == 0)
+		s[0] = '0';
+	return (1);
 }
 
 char	*ft_itoa(int n)
 {
-	long	nn;
 	int		s_size;
 	char	*result;
-	int		is_neg;
+	int		m_sign;
 
-	nn = (long) n;
-	is_neg = 0;
-	if (nn < 0)
-	{
-		is_neg = 1;
-		nn = -nn;
-	}
-	s_size = len_of_str(nn) + is_neg + 1;
+	s_size = len_of_str(n);
 	result = malloc(s_size + 1 * sizeof(char));
 	if (!result)
 		return (NULL);
-	result[--s_size] = '\0';
-	while (s_size--)
+	m_sign = sign_of(result, n);
+	result[s_size] = '\0';
+	while (n)
 	{
-		result[s_size] = ((nn % 10) + '0');
-		nn /= 10;
+		s_size--;
+		result[s_size] = m_sign * (n % 10) + '0';
+		n /= 10;
 	}
-	if (is_neg)
-		result[0] = '-';
 	return (result);
-}
-
-int main()
-{
-
-	printf("%s\n", ft_itoa(INT32_MAX));
 }
