@@ -1,39 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tlakchai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/08/26 18:33:20 by ml                #+#    #+#             */
-/*   Updated: 2023/08/28 14:49:37 by tlakchai         ###   ########.fr       */
+/*   Created: 2023/08/28 15:13:30 by tlakchai          #+#    #+#             */
+/*   Updated: 2023/08/28 15:16:18 by tlakchai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+static int	len_of_str(long n)
 {
-	size_t	i;
-	char	*result;
+	int	size;
 
-	while (start > 0 && *s)
+	size = 0;
+	while (n > 0)
 	{
-		s++;
-		start--;
+		size++;
+		n = n / 10;
 	}
-	if (ft_strlen(s) > len)
-		result = malloc((len + 1) * sizeof(char));
-	else
-		result = malloc((ft_strlen(s) + 1) * sizeof(char));
-	if (!result)
-		return (NULL);
-	i = 0;
-	while (i < len && s[i])
+	return (size);
+}
+
+void	ft_putnbr_fd(int n, int fd)
+{
+	char	*r;
+	long	nn;
+	int		is_neg;
+
+	r = ft_itoa(n);
+	if (!r)
+		return ;
+	nn = (long) n;
+	is_neg = 0;
+	if (nn < 0)
 	{
-		result[i] = s[i];
-		i++;
+		is_neg = 1;
+		nn = -nn;
 	}
-	result[i] = 0;
-	return (result);
+	write(fd, nn, len_of_str(nn) + is_neg + 1);
 }
