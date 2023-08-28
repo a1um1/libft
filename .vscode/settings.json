@@ -4,5 +4,12 @@
 		"sstream": "c",
 		"stdio.h": "c",
 		"unistd.h": "c"
-	}
+	},
+	"editor.rulers": [80],
+	"editor.tabSize": 4,
+	"editor.insertSpaces": false,
+	"editor.detectIndentation": false,
+	"editor.renderWhitespace": "all",
+	"files.trimTrailingWhitespace": true,
+	"files.insertFinalNewline": true,
 }
