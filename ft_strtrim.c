@@ -6,7 +6,7 @@
 /*   By: ml <ml@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/26 20:12:26 by ml                #+#    #+#             */
-/*   Updated: 2023/08/26 21:38:34 by ml               ###   ########.fr       */
+/*   Updated: 2023/08/29 19:23:25 by ml               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		start;
 	int		end;
 
+	if (!s1 || !set)
+		return (NULL);
 	start = 0;
 	end = ft_strlen(s1) - 1;
 	while (ft_strchr(set, s1[start]) && s1[start])

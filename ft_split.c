@@ -29,15 +29,11 @@ static int	do_count(char const *s, char c)
 	return (count);
 }
 
-char	**ft_split(char const *s, char c)
+static char	**do_split(char **result, char const *s, char c)
 {
-	char	**result;
-	int		i;
 	int		x;
+	int		i;
 
-	result = malloc((do_count(s, c) + 1) * sizeof(char *));
-	if (!result)
-		return (NULL);
 	i = 0;
 	x = 0;
 	while (*s)
@@ -55,5 +51,18 @@ char	**ft_split(char const *s, char c)
 		}
 	}
 	result[x] = 0;
+	return (result);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**result;
+
+	if (!s)
+		return (NULL);
+	result = malloc((do_count(s, c) + 1) * sizeof(char *));
+	if (!result)
+		return (NULL);
+	result = do_split(result, s, c);
 	return (result);
 }
