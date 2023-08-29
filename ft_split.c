@@ -29,7 +29,7 @@ static int	do_count(char const *s, char c)
 	return (count);
 }
 
-static char	**do_split(char **result, char const *s, char c)
+static void	do_split(char **result, char const *s, char c)
 {
 	int		x;
 	int		i;
@@ -51,7 +51,6 @@ static char	**do_split(char **result, char const *s, char c)
 		}
 	}
 	result[x] = 0;
-	return (result);
 }
 
 char	**ft_split(char const *s, char c)
@@ -63,6 +62,6 @@ char	**ft_split(char const *s, char c)
 	result = malloc((do_count(s, c) + 1) * sizeof(char *));
 	if (!result)
 		return (NULL);
-	result = do_split(result, s, c);
+	do_split(result, s, c);
 	return (result);
 }
