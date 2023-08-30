@@ -3,6 +3,14 @@
 		"libft.h": "c",
 		"sstream": "c",
 		"stdio.h": "c",
-		"unistd.h": "c"
-	}
+		"unistd.h": "c",
+		"locale": "c"
+	},
+	"editor.rulers": [80],
+	"editor.tabSize": 4,
+	"editor.insertSpaces": false,
+	"editor.detectIndentation": false,
+	"editor.renderWhitespace": "all",
+	"files.trimTrailingWhitespace": true,
+	"files.insertFinalNewline": true,
 }
