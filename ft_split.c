@@ -6,15 +6,15 @@
 /*   By: tlakchai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 11:29:12 by tlakchai          #+#    #+#             */
-/*   Updated: 2023/08/30 11:29:15 by tlakchai         ###   ########.fr       */
+/*   Updated: 2023/08/30 11:34:16 by tlakchai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	do_count(char const *s, char c)
+static size_t	do_count(char const *s, char c)
 {
-	int	count;
+	size_t	count;
 
 	count = 0;
 	while (*s)
@@ -29,9 +29,9 @@ static int	do_count(char const *s, char c)
 	return (count);
 }
 
-static char	**do_clean(char **result, int cur)
+static char	**do_clean(char **result, size_t cur)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (i < cur)
@@ -45,8 +45,8 @@ static char	**do_clean(char **result, int cur)
 
 static char	**do_split(char **result, char const *s, char c)
 {
-	int		x;
-	int		i;
+	size_t	x;
+	size_t	i;
 
 	i = 0;
 	x = 0;
