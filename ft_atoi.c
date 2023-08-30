@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ml <ml@student.42.fr>                      +#+  +:+       +#+        */
+/*   By: tlakchai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/25 13:15:39 by tlakchai          #+#    #+#             */
-/*   Updated: 2023/08/30 11:28:35 by tlakchai         ###   ########.fr       */
+/*   Updated: 2023/08/30 18:03:28 by tlakchai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static int	is_space(char c)
 {
@@ -18,26 +19,49 @@ static int	is_space(char c)
 		|| c == '\f' || c == '\r' || c == ' ');
 }
 
+const char	*do_find_mulp(const char *str, int *mulp, unsigned long	*cutoff)
+{
+	*mulp = 1;
+	*cutoff = LONG_MAX;
+	while (is_space(*str))
+		(str)++;
+	if (*str == '+' || *str == '-')
+		*mulp = 1 - 2 * (*(str)++ == '-');
+	if (*mulp == -1)
+		*cutoff = (unsigned long) LONG_MAX + 1;
+	return (str);
+}
+
 int	ft_atoi(const char *str)
 {
-	int	result;
-	int	mulp;
+	long			re;
+	int				mulp;
+	unsigned long	cutoff;
+	int				cutlim;
+	char			*sstr;
 
-	result = 0;
-	mulp = 1;
-	while (is_space(*str))
-		str++;
-	if (*str == '+' || *str == '-')
+	re = 0;
+	sstr = (char *) do_find_mulp(str, &mulp, &cutoff);
+	cutlim = cutoff % 10;
+	cutoff /= 10;
+	while (*sstr >= '0' && *sstr <= '9')
 	{
-		if (*str == '-')
-			mulp = -1;
-		str++;
+		if (re > cutoff || (re == cutoff && (*sstr - '0') > cutlim))
+		{
+			if (mulp == 1)
+				return ((int) LONG_MAX);
+			else
+				return ((int) LONG_MIN);
+		}
+		re = (re * 10) + (*(sstr++) - '0');
 	}
-	while (*str >= '0' && *str <= '9')
-	{
-		result *= 10;
-		result += *str - '0';
-		str++;
-	}
-	return (result * mulp);
+	return ((int) re * mulp);
+}
+
+
+int main()
+{
+	char c[300] = "92233720368547758010";
+	printf("%d %d\n", atoi(c), ft_atoi(c));
+	return 0;
 }
