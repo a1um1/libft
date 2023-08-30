@@ -29,7 +29,21 @@ static int	do_count(char const *s, char c)
 	return (count);
 }
 
-static void	do_split(char **result, char const *s, char c)
+static char	**do_clean(char **result, int cur)
+{
+	int	i;
+
+	i = 0;
+	while (i < cur)
+	{
+		free(result[i]);
+		i++;
+	}
+	free(result);
+	return (NULL);
+}
+
+static char	**do_split(char **result, char const *s, char c)
 {
 	int		x;
 	int		i;
@@ -47,10 +61,13 @@ static void	do_split(char **result, char const *s, char c)
 			else
 				i = ft_strchr(s, c) - s;
 			result[x++] = ft_substr(s, 0, i);
+			if (!result[x - 1])
+				return (do_clean(result, x));
 			s += i;
 		}
 	}
 	result[x] = 0;
+	return (result);
 }
 
 char	**ft_split(char const *s, char c)
@@ -62,6 +79,5 @@ char	**ft_split(char const *s, char c)
 	result = malloc((do_count(s, c) + 1) * sizeof(char *));
 	if (!result)
 		return (NULL);
-	do_split(result, s, c);
-	return (result);
+	return (do_split(result, s, c));
 }
