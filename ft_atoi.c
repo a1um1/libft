@@ -6,7 +6,7 @@
 /*   By: tlakchai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/25 13:15:39 by tlakchai          #+#    #+#             */
-/*   Updated: 2023/08/30 18:03:28 by tlakchai         ###   ########.fr       */
+/*   Updated: 2023/08/30 18:10:07 by tlakchai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ const char	*do_find_mulp(const char *str, int *mulp, unsigned long	*cutoff)
 
 int	ft_atoi(const char *str)
 {
-	long			re;
+	unsigned long	re;
 	int				mulp;
 	unsigned long	cutoff;
 	int				cutlim;
@@ -61,7 +61,7 @@ int	ft_atoi(const char *str)
 
 int main()
 {
-	char c[300] = "92233720368547758010";
+	char c[300] = "-696969696969";
 	printf("%d %d\n", atoi(c), ft_atoi(c));
 	return 0;
 }
