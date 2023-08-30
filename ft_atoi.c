@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tlakchai <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ml <ml@student.42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/25 13:15:39 by tlakchai          #+#    #+#             */
-/*   Updated: 2023/08/25 19:27:19 by tlakchai         ###   ########.fr       */
+/*   Updated: 2023/08/26 17:46:47 by ml               ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h";
+#include "libft.h"
 
 static int	is_space(char c)
 {
@@ -20,28 +20,24 @@ static int	is_space(char c)
 
 int	ft_atoi(const char *str)
 {
-	int	i;
 	int	result;
 	int	mulp;
 
-	i = 0;
 	result = 0;
 	mulp = 1;
-	if (str == NULL)
-		return (0);
-	while (is_space(str[i]))
-		i++;
-	if (str[i] == '+' || str[i] == '-')
+	while (is_space(*str))
+		str++;
+	if (*str == '+' || *str == '-')
 	{
-		if (str[i] == '-')
+		if (*str == '-')
 			mulp = -1;
-		i++;
+		str++;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
+	while (*str >= '0' && *str <= '9')
 	{
 		result *= 10;
-		result += str[i] - '0';
-		i++;
+		result += *str - '0';
+		str++;
 	}
 	return (result * mulp);
 }

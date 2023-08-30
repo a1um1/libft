@@ -6,7 +6,7 @@
 /*   By: tlakchai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/25 18:38:25 by tlakchai          #+#    #+#             */
-/*   Updated: 2023/08/25 19:40:43 by tlakchai         ###   ########.fr       */
+/*   Updated: 2023/08/28 16:34:53 by tlakchai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,18 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	int		i;
 	void	*result;
 
-	if (count < 0 || size < 0)
+	if (count < 1 || size < 1)
+	{
+		result = malloc(0);
+		if (result == NULL)
+			return (NULL);
+		return (result);
+	}
+	if (count > SIZE_MAX / size)
 		return (NULL);
 	result = malloc(count * size);
-	i = 0;
 	if (result == NULL)
 		return (NULL);
 	ft_bzero(result, count * size);
