@@ -6,12 +6,11 @@
 /*   By: tlakchai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/25 13:15:39 by tlakchai          #+#    #+#             */
-/*   Updated: 2023/08/30 18:10:07 by tlakchai         ###   ########.fr       */
+/*   Updated: 2023/08/31 11:04:45 by tlakchai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static int	is_space(char c)
 {
@@ -56,12 +55,4 @@ int	ft_atoi(const char *str)
 		re = (re * 10) + (*(sstr++) - '0');
 	}
 	return ((int) re * mulp);
-}
-
-
-int main()
-{
-	char c[300] = "-696969696969";
-	printf("%d %d\n", atoi(c), ft_atoi(c));
-	return 0;
 }
