@@ -6,7 +6,7 @@
 /*   By: tlakchai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/28 15:13:30 by tlakchai          #+#    #+#             */
-/*   Updated: 2023/08/30 11:29:02 by tlakchai         ###   ########.fr       */
+/*   Updated: 2023/09/05 13:21:18 by tlakchai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,7 @@ void	ft_putnbr_fd(int n, int fd)
 {
 	if (n == -2147483648)
 	{
-		ft_putchar_fd('-', fd);
-		ft_putchar_fd('2', fd);
+		write(fd, "-2", 2);
 		n = 147483648;
 	}
 	if (n < 0)
