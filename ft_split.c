@@ -6,7 +6,7 @@
 /*   By: tlakchai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 11:29:12 by tlakchai          #+#    #+#             */
-/*   Updated: 2023/08/31 11:05:14 by tlakchai         ###   ########.fr       */
+/*   Updated: 2023/09/07 12:19:51 by tlakchai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,9 @@ static size_t	do_count(char const *s, char c)
 	count = 0;
 	while (*s)
 	{
-		if (*s == c && *s)
+		while (*s == c && *s)
 			s++;
-		if (*s && *s != c)
+		if (*s)
 			count++;
 		while (*s != c && *s)
 			s++;
@@ -60,9 +60,10 @@ static char	**do_split(char **result, char const *s, char c)
 				i = ft_strlen(s);
 			else
 				i = ft_strchr(s, c) - s;
-			result[x++] = ft_substr(s, 0, i);
-			if (!result[x - 1])
+			result[x] = ft_substr(s, 0, i);
+			if (!result[x])
 				return (do_clean(result, x));
+			x++;
 			s += i;
 		}
 	}

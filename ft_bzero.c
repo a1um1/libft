@@ -6,7 +6,7 @@
 /*   By: tlakchai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/25 11:08:52 by tlakchai          #+#    #+#             */
-/*   Updated: 2023/09/05 13:36:23 by tlakchai         ###   ########.fr       */
+/*   Updated: 2023/09/07 12:21:39 by tlakchai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,5 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	size_t			i;
-	unsigned char	*ss;
-
-	i = 0;
-	ss = s;
-	while (i < n)
-		ss[i++] = 0;
+	ft_memchr(s, 0, n);
 }

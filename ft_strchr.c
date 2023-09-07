@@ -6,7 +6,7 @@
 /*   By: tlakchai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/25 11:36:26 by tlakchai          #+#    #+#             */
-/*   Updated: 2023/09/05 14:26:27 by tlakchai         ###   ########.fr       */
+/*   Updated: 2023/09/07 12:28:07 by tlakchai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strchr(const char *s, int c)
 	i = 0;
 	ss = (char *) s;
 	cc = (char) c;
-	while (s[i])
+	while (ss[i])
 	{
 		if (ss[i] == cc)
 			return (ss + i);
