@@ -6,7 +6,7 @@
 /*   By: tlakchai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/25 18:38:25 by tlakchai          #+#    #+#             */
-/*   Updated: 2023/09/11 18:46:33 by tlakchai         ###   ########.fr       */
+/*   Updated: 2023/09/11 18:55:12 by tlakchai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	*ft_calloc(size_t count, size_t size)
 	size_t	bytes;
 
 	bytes = count * size;
-	if (size > 0 && bytes / size != count)
+	if (size != 0 && bytes / size != count)
 		return (NULL);
 	result = malloc(bytes);
 	if (!result)
