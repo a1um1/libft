@@ -6,7 +6,7 @@
 /*   By: tlakchai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 11:29:12 by tlakchai          #+#    #+#             */
-/*   Updated: 2023/09/07 12:19:51 by tlakchai         ###   ########.fr       */
+/*   Updated: 2023/09/11 18:49:22 by tlakchai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ static char	**do_split(char **result, char const *s, char c)
 			s += i;
 		}
 	}
-	result[x] = 0;
+	result[x] = NULL;
 	return (result);
 }
 

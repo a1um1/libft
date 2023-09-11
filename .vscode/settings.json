@@ -4,7 +4,8 @@
 		"sstream": "c",
 		"stdio.h": "c",
 		"unistd.h": "c",
-		"locale": "c"
+		"locale": "c",
+		"stdint.h": "c"
 	},
 	"editor.rulers": [80],
 	"editor.tabSize": 4,

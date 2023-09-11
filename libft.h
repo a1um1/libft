@@ -6,7 +6,7 @@
 /*   By: tlakchai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/25 10:41:46 by tlakchai          #+#    #+#             */
-/*   Updated: 2023/08/30 16:05:49 by tlakchai         ###   ########.fr       */
+/*   Updated: 2023/09/11 18:49:57 by tlakchai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdint.h>
 # include <limits.h>
 
 int		ft_isalpha(int c);
