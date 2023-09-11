@@ -5,7 +5,10 @@
 		"stdio.h": "c",
 		"unistd.h": "c",
 		"locale": "c",
-		"stdint.h": "c"
+		"stdint.h": "c",
+		"__bit_reference": "c",
+		"bitset": "c",
+		"unordered_map": "c"
 	},
 	"editor.rulers": [80],
 	"editor.tabSize": 4,
