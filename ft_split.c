@@ -6,7 +6,7 @@
 /*   By: tlakchai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 11:29:12 by tlakchai          #+#    #+#             */
-/*   Updated: 2023/09/11 18:49:22 by tlakchai         ###   ########.fr       */
+/*   Updated: 2023/09/29 20:05:38 by tlakchai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,7 @@ static char	**do_clean(char **result, size_t cur)
 
 	i = 0;
 	while (i < cur)
-	{
-		free(result[i]);
-		i++;
-	}
+		free(result[i++]);
 	free(result);
 	return (NULL);
 }
