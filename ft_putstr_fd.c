@@ -6,7 +6,7 @@
 /*   By: tlakchai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/28 12:12:42 by tlakchai          #+#    #+#             */
-/*   Updated: 2023/09/07 14:19:39 by tlakchai         ###   ########.fr       */
+/*   Updated: 2023/09/29 20:09:19 by tlakchai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putstr_fd(char *s, int fd)
 {
-	if (!s)
+	if (s != NULL)
 		return ;
 	write(fd, s, ft_strlen(s));
 }

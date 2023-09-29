@@ -6,7 +6,7 @@
 /*   By: tlakchai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/28 13:56:41 by tlakchai          #+#    #+#             */
-/*   Updated: 2023/08/28 15:48:14 by tlakchai         ###   ########.fr       */
+/*   Updated: 2023/09/29 20:08:30 by tlakchai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,11 +49,11 @@ char	*ft_itoa(int n)
 
 	s_size = len_of_str(n);
 	result = malloc(s_size + 1 * sizeof(char));
-	if (!result)
+	if (result == NULL)
 		return (NULL);
 	m_sign = sign_of(result, n);
 	result[s_size] = '\0';
-	while (n)
+	while (n != 0)
 	{
 		s_size--;
 		result[s_size] = m_sign * (n % 10) + '0';

@@ -6,7 +6,7 @@
 /*   By: tlakchai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/25 11:11:48 by tlakchai          #+#    #+#             */
-/*   Updated: 2023/09/29 19:43:36 by tlakchai         ###   ########.fr       */
+/*   Updated: 2023/09/29 20:13:55 by tlakchai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 	unsigned char	*ssrc;
 
 	if (dst == src)
-		return (NULL);
+		return (dst);
 	i = 0;
 	ddst = (unsigned char *) dst;
 	ssrc = (unsigned char *) src;

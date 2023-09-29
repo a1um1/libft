@@ -6,7 +6,7 @@
 /*   By: tlakchai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 11:30:05 by tlakchai          #+#    #+#             */
-/*   Updated: 2023/09/05 14:20:28 by tlakchai         ###   ########.fr       */
+/*   Updated: 2023/09/29 20:06:24 by tlakchai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (!s)
 		return (NULL);
-	while (start > 0 && *s)
+	while (start > 0 && *s != NULL)
 	{
 		s++;
 		start--;
@@ -31,7 +31,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (!result)
 		return (NULL);
 	i = 0;
-	while (i < len && s[i])
+	while (i < len && s[i] != NULL)
 	{
 		result[i] = s[i];
 		i++;

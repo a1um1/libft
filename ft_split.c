@@ -6,7 +6,7 @@
 /*   By: tlakchai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 11:29:12 by tlakchai          #+#    #+#             */
-/*   Updated: 2023/09/29 20:05:38 by tlakchai         ###   ########.fr       */
+/*   Updated: 2023/09/29 20:10:13 by tlakchai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@ static size_t	do_count(char const *s, char c)
 	size_t	count;
 
 	count = 0;
-	while (*s)
+	while (*s != NULL)
 	{
-		while (*s == c && *s)
+		while (*s == c && *s != NULL)
 			s++;
 		if (*s)
 			count++;
-		while (*s != c && *s)
+		while (*s != c && *s != NULL)
 			s++;
 	}
 	return (count);
@@ -47,13 +47,13 @@ static char	**do_split(char **result, char const *s, char c)
 
 	i = 0;
 	x = 0;
-	while (*s)
+	while (*s != NULL)
 	{
 		while (*s == c && *s)
 			s++;
-		if (*s)
+		if (*s != NULL)
 		{
-			if (!ft_strchr(s, c))
+			if (ft_strchr(s, c) == NULL)
 				i = ft_strlen(s);
 			else
 				i = ft_strchr(s, c) - s;
@@ -72,7 +72,7 @@ char	**ft_split(char const *s, char c)
 {
 	char	**result;
 
-	if (!s)
+	if (s == NULL)
 		return (NULL);
 	result = malloc((do_count(s, c) + 1) * sizeof(char *));
 	if (!result)
