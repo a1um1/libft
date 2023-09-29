@@ -6,7 +6,7 @@
 /*   By: tlakchai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/28 12:47:40 by tlakchai          #+#    #+#             */
-/*   Updated: 2023/08/30 18:07:35 by tlakchai         ###   ########.fr       */
+/*   Updated: 2023/09/29 19:42:34 by tlakchai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*result;
 	size_t	i;
 
-	if (!s)
+	if (!s || !f)
 		return (NULL);
 	result = malloc(ft_strlen(s) + 1 * sizeof(char));
 	if (!result)
