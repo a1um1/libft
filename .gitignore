@@ -2,3 +2,4 @@
 *.a
 a.out.dSYM
 test.c
+a.out
