@@ -6,7 +6,7 @@
 /*   By: tlakchai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/25 18:38:25 by tlakchai          #+#    #+#             */
-/*   Updated: 2023/09/29 20:07:21 by tlakchai         ###   ########.fr       */
+/*   Updated: 2023/09/28 09:42:51 by tlakchai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,3 @@ void	*ft_calloc(size_t count, size_t size)
 	ft_bzero(result, count * size);
 	return (result);
 }
-

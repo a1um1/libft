@@ -6,7 +6,7 @@
 /*   By: tlakchai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 11:29:12 by tlakchai          #+#    #+#             */
-/*   Updated: 2023/09/29 20:10:13 by tlakchai         ###   ########.fr       */
+/*   Updated: 2023/09/11 18:49:22 by tlakchai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,13 @@ static size_t	do_count(char const *s, char c)
 	size_t	count;
 
 	count = 0;
-	while (*s != NULL)
+	while (*s)
 	{
-		while (*s == c && *s != NULL)
+		while (*s == c && *s)
 			s++;
 		if (*s)
 			count++;
-		while (*s != c && *s != NULL)
+		while (*s != c && *s)
 			s++;
 	}
 	return (count);
@@ -35,7 +35,10 @@ static char	**do_clean(char **result, size_t cur)
 
 	i = 0;
 	while (i < cur)
-		free(result[i++]);
+	{
+		free(result[i]);
+		i++;
+	}
 	free(result);
 	return (NULL);
 }
@@ -47,13 +50,13 @@ static char	**do_split(char **result, char const *s, char c)
 
 	i = 0;
 	x = 0;
-	while (*s != NULL)
+	while (*s)
 	{
 		while (*s == c && *s)
 			s++;
-		if (*s != NULL)
+		if (*s)
 		{
-			if (ft_strchr(s, c) == NULL)
+			if (!ft_strchr(s, c))
 				i = ft_strlen(s);
 			else
 				i = ft_strchr(s, c) - s;
@@ -72,7 +75,7 @@ char	**ft_split(char const *s, char c)
 {
 	char	**result;
 
-	if (s == NULL)
+	if (!s)
 		return (NULL);
 	result = malloc((do_count(s, c) + 1) * sizeof(char *));
 	if (!result)
