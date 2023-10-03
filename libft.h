@@ -6,7 +6,7 @@
 /*   By: tlakchai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/25 10:41:46 by tlakchai          #+#    #+#             */
-/*   Updated: 2023/10/04 03:58:37 by tlakchai         ###   ########.fr       */
+/*   Updated: 2023/09/11 18:49:57 by tlakchai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,6 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <limits.h>
-
-# ifndef SIZE_MAX
-#  define SIZE_MAX __SIZE_MAX__
-# endif
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
