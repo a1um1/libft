@@ -10,7 +10,7 @@ NAME = libft.a
 
 all: ${NAME}
 
-.c.o:
+.c.o: libft.h
 	cc -Wall -Werror -Wextra -I . -c $< -o $@
 
 ${NAME}:	${OBJ}
