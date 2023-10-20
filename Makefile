@@ -28,20 +28,20 @@ SRCS	=	${addprefix ${SRC_DIR}, ${SRC}}
 OBJ		=	${SRCS:.c=.o}
 NAME	=	libft.a
 
-all:	${NAME}
+all		:	${NAME}
 
-.c.o: libft.h
+.c.o	:	libft.h
 	cc -Wall -Werror -Wextra -I . -c $< -o $@
 
-${NAME}:	${OBJ}
+${NAME}	:	${OBJ}
 	ar -rcs ${NAME} ${OBJ}
 
-clean:
+clean	:
 	rm -f ${OBJ}
 
-fclean:		clean
+fclean	:	clean
 	rm -f ${NAME}
 
-re:			fclean all
+re		:	fclean all
 
-.PHONY: all clean fclean re SRC
+.PHONY: all clean fclean re
