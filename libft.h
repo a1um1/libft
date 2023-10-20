@@ -21,6 +21,8 @@
 #  define SIZE_MAX __SIZE_MAX__
 # endif
 
+typedef char *string;
+
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
