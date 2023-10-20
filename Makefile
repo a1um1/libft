@@ -1,14 +1,34 @@
-SRC = ft_isalnum.c ft_isascii.c ft_isprint.c ft_memmove.c ft_strchr.c
-SRC += ft_strrchr.c ft_toupper.c ft_bzero.c ft_isalpha.c ft_isdigit.c ft_memcpy.c
-SRC += ft_memset.c ft_strlen.c ft_tolower.c ft_atoi.c ft_strdup.c ft_strncmp.c
-SRC += ft_memchr.c ft_memcmp.c ft_strlcat.c ft_strlcpy.c ft_strnstr.c ft_calloc.c
-SRC += ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_putchar_fd.c ft_putstr_fd.c
-SRC += ft_strmapi.c ft_striteri.c ft_putendl_fd.c ft_itoa.c ft_putnbr_fd.c
-SRCS = ${addprefix ${SRC_DIR}, ${SRC}}
-OBJ = ${SRCS:.c=.o}
-NAME = libft.a
+SRC_DIR = 	./
 
-all: ${NAME}
+# String
+SRC 	= 	str/ft_strchr.c str/ft_strrchr.c str/ft_strlen.c \
+			str/ft_strdup.c str/ft_strlcpy.c str/ft_strnstr.c \
+			str/ft_substr.c str/ft_strjoin.c str/ft_strtrim.c \
+			str/ft_split.c str/ft_strlcat.c str/ft_strmapi.c \
+			str/ft_striteri.c str/ft_strncmp.c
+
+# Memory
+SRC 	+=	mem/ft_memchr.c mem/ft_memcmp.c mem/ft_memcpy.c \
+			mem/ft_memset.c mem/ft_calloc.c mem/ft_bzero.c \
+			mem/ft_memmove.c
+			
+# Character
+SRC 	+=	chr/ft_isalnum.c chr/ft_isascii.c chr/ft_isprint.c \
+			chr/ft_toupper.c chr/ft_isalpha.c chr/ft_isdigit.c \
+			chr/ft_tolower.c 
+
+# File Descriptor
+SRC 	+=	fd/ft_putchar_fd.c fd/ft_putstr_fd.c fd/ft_putendl_fd.c \
+			fd/ft_putnbr_fd.c
+
+# Utilities
+SRC 	+=	utils/ft_atoi.c utils/ft_itoa.c
+
+SRCS	=	${addprefix ${SRC_DIR}, ${SRC}}
+OBJ		=	${SRCS:.c=.o}
+NAME	=	libft.a
+
+all:	${NAME}
 
 .c.o: libft.h
 	cc -Wall -Werror -Wextra -I . -c $< -o $@
