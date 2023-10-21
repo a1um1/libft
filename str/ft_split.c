@@ -6,13 +6,13 @@
 /*   By: tlakchai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 11:29:12 by tlakchai          #+#    #+#             */
-/*   Updated: 2023/09/11 18:49:22 by tlakchai         ###   ########.fr       */
+/*   Updated: 2023/10/21 14:22:19 by tlakchai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	do_count(char const *s, char c)
+static size_t	do_count(t_string s, char c)
 {
 	size_t	count;
 
@@ -43,7 +43,7 @@ static char	**do_clean(char **result, size_t cur)
 	return (NULL);
 }
 
-static char	**do_split(char **result, char const *s, char c)
+static char	**do_split(t_string *result, t_string s, char c)
 {
 	size_t	x;
 	size_t	i;
@@ -71,9 +71,9 @@ static char	**do_split(char **result, char const *s, char c)
 	return (result);
 }
 
-char	**ft_split(char const *s, char c)
+t_string	*ft_split(const	t_string s, char c)
 {
-	char	**result;
+	t_string	*result;
 
 	if (!s)
 		return (NULL);

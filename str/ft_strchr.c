@@ -6,13 +6,13 @@
 /*   By: tlakchai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/25 11:36:26 by tlakchai          #+#    #+#             */
-/*   Updated: 2023/09/07 12:28:07 by tlakchai         ###   ########.fr       */
+/*   Updated: 2023/10/21 09:05:33 by tlakchai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strchr(const t_string s, int c)
 {
 	size_t	i;
 	char	*ss;
