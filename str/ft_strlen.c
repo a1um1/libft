@@ -6,11 +6,11 @@
 /*   By: tlakchai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/25 10:59:33 by tlakchai          #+#    #+#             */
-/*   Updated: 2023/10/21 09:05:33 by tlakchai         ###   ########.fr       */
+/*   Updated: 2023/10/21 14:58:26 by tlakchai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 size_t	ft_strlen(const t_string s)
 {
