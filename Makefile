@@ -11,11 +11,11 @@ SRC 	= 	str/ft_strchr.c str/ft_strrchr.c str/ft_strlen.c \
 SRC 	+=	mem/ft_memchr.c mem/ft_memcmp.c mem/ft_memcpy.c \
 			mem/ft_memset.c mem/ft_calloc.c mem/ft_bzero.c \
 			mem/ft_memmove.c
-			
+
 # Character
 SRC 	+=	chr/ft_isalnum.c chr/ft_isascii.c chr/ft_isprint.c \
 			chr/ft_toupper.c chr/ft_isalpha.c chr/ft_isdigit.c \
-			chr/ft_tolower.c 
+			chr/ft_tolower.c
 
 # File Descriptor
 SRC 	+=	fd/ft_putchar_fd.c fd/ft_putstr_fd.c fd/ft_putendl_fd.c \
@@ -34,7 +34,7 @@ all		:	${NAME}
 	cc -Wall -Werror -Wextra -I . -c $< -o $@
 
 ${NAME}	:	${OBJ}
-	ar -rcs ${NAME} ${OBJ}
+	ar rcs ${NAME} ${OBJ}
 
 clean	:
 	rm -f ${OBJ}
