@@ -6,11 +6,11 @@
 /*   By: tlakchai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 11:29:30 by tlakchai          #+#    #+#             */
-/*   Updated: 2023/10/21 14:19:01 by tlakchai         ###   ########.fr       */
+/*   Updated: 2023/11/28 05:05:56 by tlakchai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 t_string	ft_strjoin(const t_string s1, const t_string s2)
 {
@@ -20,7 +20,7 @@ t_string	ft_strjoin(const t_string s1, const t_string s2)
 
 	if (!s1 || !s2)
 		return (NULL);
-	result = malloc((gnl_strlen(s1) + gnl_strlen(s2) + 1) * sizeof(char));
+	result = malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
 	if (!result)
 		return (NULL);
 	i = 0;
