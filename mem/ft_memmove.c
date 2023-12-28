@@ -6,11 +6,11 @@
 /*   By: tlakchai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/25 11:11:48 by tlakchai          #+#    #+#             */
-/*   Updated: 2023/10/02 09:54:14 by tlakchai         ###   ########.fr       */
+/*   Updated: 2023/12/29 04:45:48 by tlakchai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 void	*ft_memmove(void *dst, const void *src, size_t n)
 {

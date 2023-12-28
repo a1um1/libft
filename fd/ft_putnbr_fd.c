@@ -6,11 +6,11 @@
 /*   By: tlakchai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/28 15:13:30 by tlakchai          #+#    #+#             */
-/*   Updated: 2023/09/07 12:27:39 by tlakchai         ###   ########.fr       */
+/*   Updated: 2023/12/29 04:45:22 by tlakchai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 static void	pnbr_put(long n, int fd)
 {

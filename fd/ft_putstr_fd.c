@@ -6,11 +6,11 @@
 /*   By: tlakchai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/28 12:12:42 by tlakchai          #+#    #+#             */
-/*   Updated: 2023/09/28 09:46:41 by tlakchai         ###   ########.fr       */
+/*   Updated: 2023/12/29 04:45:26 by tlakchai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 void	ft_putstr_fd(char *s, int fd)
 {

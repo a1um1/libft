@@ -6,11 +6,11 @@
 /*   By: tlakchai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 11:29:57 by tlakchai          #+#    #+#             */
-/*   Updated: 2023/10/22 23:16:28 by tlakchai         ###   ########.fr       */
+/*   Updated: 2023/12/29 04:46:22 by tlakchai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 t_string	ft_strtrim(const t_string s1, const t_string set)
 {

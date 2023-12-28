@@ -6,11 +6,11 @@
 /*   By: tlakchai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 11:30:05 by tlakchai          #+#    #+#             */
-/*   Updated: 2023/10/21 09:05:33 by tlakchai         ###   ########.fr       */
+/*   Updated: 2023/12/29 04:46:22 by tlakchai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 char	*ft_substr(t_string s, unsigned int start, size_t len)
 {

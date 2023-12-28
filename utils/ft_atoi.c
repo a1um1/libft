@@ -6,11 +6,11 @@
 /*   By: tlakchai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/25 13:15:39 by tlakchai          #+#    #+#             */
-/*   Updated: 2023/10/23 13:54:58 by tlakchai         ###   ########.fr       */
+/*   Updated: 2023/12/29 04:46:22 by tlakchai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 static int	is_space(char c)
 {

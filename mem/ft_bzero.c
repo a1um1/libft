@@ -6,11 +6,11 @@
 /*   By: tlakchai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/25 11:08:52 by tlakchai          #+#    #+#             */
-/*   Updated: 2023/09/11 19:18:40 by tlakchai         ###   ########.fr       */
+/*   Updated: 2023/12/29 04:45:30 by tlakchai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

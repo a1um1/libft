@@ -6,11 +6,11 @@
 /*   By: tlakchai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 11:29:12 by tlakchai          #+#    #+#             */
-/*   Updated: 2023/10/21 14:22:19 by tlakchai         ###   ########.fr       */
+/*   Updated: 2023/12/29 04:46:23 by tlakchai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 static size_t	do_count(t_string s, char c)
 {

@@ -6,11 +6,11 @@
 /*   By: tlakchai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/25 10:55:53 by tlakchai          #+#    #+#             */
-/*   Updated: 2023/08/25 11:05:22 by tlakchai         ###   ########.fr       */
+/*   Updated: 2023/12/29 04:45:03 by tlakchai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../libft.h"
 
 int	ft_isprint(int c)
 {
