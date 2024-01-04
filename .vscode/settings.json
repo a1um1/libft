@@ -1,21 +1,20 @@
 {
-	"files.associations": {
-		"libft.h": "c",
-		"sstream": "c",
-		"stdio.h": "c",
-		"unistd.h": "c",
-		"locale": "c",
-		"stdint.h": "c",
-		"__bit_reference": "c",
-		"bitset": "c",
-		"unordered_map": "c"
-	},
-	"editor.rulers": [80],
 	"editor.tabSize": 4,
 	"editor.insertSpaces": false,
 	"editor.detectIndentation": false,
 	"editor.renderWhitespace": "all",
 	"files.trimTrailingWhitespace": true,
 	"files.insertFinalNewline": true,
-	"workbench.panel.defaultLocation": "right",
+	"files.autoSave": "afterDelay",
+	"42header.email": "marvin@42.fr",
+	"42header.username": "4242",
+	"workbench.colorTheme": "Catppuccin Mocha",
+	"workbench.iconTheme": "catppuccin-perfect-mocha",
+	"window.commandCenter": false,
+	"editor.minimap.enabled": false,
+	"editor.rulers": [
+		80
+	],
+	"clangd.checkUpdates": true,
+	"C_Cpp.intelliSenseEngine": "disabled",
 }
