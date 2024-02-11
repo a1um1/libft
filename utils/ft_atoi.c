@@ -6,7 +6,7 @@
 /*   By: tlakchai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/25 13:15:39 by tlakchai          #+#    #+#             */
-/*   Updated: 2023/12/29 04:46:22 by tlakchai         ###   ########.fr       */
+/*   Updated: 2024/01/01 04:25:12 by tlakchai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ const char	*do_find_mulp(const char *str, int *mulp, unsigned long	*cutoff)
 	return (str);
 }
 
-int	ft_atoi(const t_string str)
+int	ft_atoi(const char *str)
 {
 	unsigned long	re;
 	int				mulp;

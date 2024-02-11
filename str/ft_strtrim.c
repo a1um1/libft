@@ -6,17 +6,17 @@
 /*   By: tlakchai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 11:29:57 by tlakchai          #+#    #+#             */
-/*   Updated: 2023/12/29 04:46:22 by tlakchai         ###   ########.fr       */
+/*   Updated: 2024/01/01 04:46:14 by tlakchai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-t_string	ft_strtrim(const t_string s1, const t_string set)
+char	*ft_strtrim(const char *s1, const char *set)
 {
-	t_string	result;
-	size_t		start;
-	size_t		end;
+	char	*result;
+	size_t	start;
+	size_t	end;
 
 	if (!s1 || !set)
 		return (NULL);
