@@ -17,6 +17,10 @@
 # include <unistd.h>
 # include <limits.h>
 
+# ifndef SIZE_MAX
+#   define SIZE_MAX __SIZE_MAX__
+#endif
+
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
