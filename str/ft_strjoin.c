@@ -6,7 +6,7 @@
 /*   By: tlakchai <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/30 11:29:30 by tlakchai          #+#    #+#             */
-/*   Updated: 2024/01/01 04:29:27 by tlakchai         ###   ########.fr       */
+/*   Updated: 2024/02/18 23:14:36 by tlakchai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strjoin(const char *s1, const char *s2)
 {
 	size_t		i;
 	size_t		x;
-	char	*result;
+	char		*result;
 
 	if (!s1 || !s2)
 		return (NULL);
